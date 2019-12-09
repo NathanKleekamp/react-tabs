@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Tabs, Tab } from './Tabs';
 import './App.css';
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs
+        id="test-tabs"
+        ariaLabel="Test Tabs"
+        defaultSelected={0}
+      >
+        <Tab tabText="Button title">
+          <p>Some tab content, of course.</p>
+        </Tab>
+        <Tab tabText="Button title 2">
+          <p>Some <em>more</em> tab content, of course.</p>
+        </Tab>
+        <Tab tabText="Button title 3">
+          <p>Some <em>additional</em> tab content, of course.</p>
+        </Tab>
+      </Tabs>
     </div>
   );
-}
-
-export default App;
+};
